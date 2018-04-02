@@ -38,6 +38,6 @@ return [
     'facebook' => [
     'client_id' => '223567751713197',
     'client_secret' => 'f11f863577685c58728946b1cebe7889',
-    'redirect' => 'http://localhost:8000/callback',
+    'redirect' => 'https://quiet-ridge-76454.herokuapp.com/callback',
     ],
 ];
