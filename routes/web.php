@@ -15,15 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/redirect', 'SocialAuthFacebookController@redirect');
-Route::get('/callback', 'SocialAuthFacebookController@callback');
+//Route::get('/redirect', 'SocialAuthFacebookController@redirect');
+//Route::get('/callback', 'SocialAuthFacebookController@callback');
 
 // Generate a login URL
-/*
+
 Route::get('/login', function(SammyK\LaravelFacebookSdk\LaravelFacebookSdk $fb)
 {
     // Send an array of permissions to request
@@ -98,4 +98,3 @@ Route::get('/callback', function(SammyK\LaravelFacebookSdk\LaravelFacebookSdk $f
 
     return redirect('/')->with('message', 'Successfully logged in with Facebook');
 });
-*/
