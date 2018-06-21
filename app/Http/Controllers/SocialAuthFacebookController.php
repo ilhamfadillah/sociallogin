@@ -85,6 +85,7 @@ class SocialAuthFacebookController extends Controller
         exit;
       }
 
+      var_dump($helper);exit;
       // Logged in
       echo '<h3>Access Token</h3>';
       var_dump($accessToken->getValue());
