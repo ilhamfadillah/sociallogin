@@ -21,7 +21,7 @@ class SocialAuthFacebookController extends Controller
     public function redirect()
     {
 
-      $fb = new Facebook\Facebook([
+      $fb = new Facebook([
         'app_id' => '223567751713197', // Replace {app-id} with your app id
         'app_secret' => 'f11f863577685c58728946b1cebe7889',
         'default_graph_version' => 'v2.2',
@@ -47,7 +47,7 @@ class SocialAuthFacebookController extends Controller
     {
 
 
-      $fb = new Facebook\Facebook([
+      $fb = new Facebook([
         'app_id' => '223567751713197', // Replace {app-id} with your app id
         'app_secret' => 'f11f863577685c58728946b1cebe7889',
         'default_graph_version' => 'v2.2',
@@ -57,11 +57,11 @@ class SocialAuthFacebookController extends Controller
 
       try {
         $accessToken = $helper->getAccessToken();
-      } catch(Facebook\Exceptions\FacebookResponseException $e) {
+      } catch(FacebookResponseException $e) {
         // When Graph returns an error
         echo 'Graph returned an error: ' . $e->getMessage();
         exit;
-      } catch(Facebook\Exceptions\FacebookSDKException $e) {
+      } catch(FacebookSDKException $e) {
         // When validation fails or other local issues
         echo 'Facebook SDK returned an error: ' . $e->getMessage();
         exit;
@@ -103,7 +103,7 @@ class SocialAuthFacebookController extends Controller
         // Exchanges a short-lived access token for a long-lived one
         try {
           $accessToken = $oAuth2Client->getLongLivedAccessToken($accessToken);
-        } catch (Facebook\Exceptions\FacebookSDKException $e) {
+        } catch (FacebookSDKException $e) {
           echo "<p>Error getting long-lived access token: " . $helper->getMessage() . "</p>\n\n";
           exit;
         }
