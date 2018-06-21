@@ -20,7 +20,7 @@ class SocialAuthFacebookController extends Controller
    */
     public function redirect()
     {
-
+      /*
       $fb = new Facebook([
         'app_id' => '223567751713197', // Replace {app-id} with your app id
         'app_secret' => 'f11f863577685c58728946b1cebe7889',
@@ -33,9 +33,9 @@ class SocialAuthFacebookController extends Controller
       $loginUrl = $helper->getLoginUrl('http://quiet-ridge-76454.herokuapp.com/callback', $permissions);
 
       echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
+      */
 
-
-        //return Socialite::driver('facebook')->redirect();
+      return Socialite::driver('facebook')->redirect();
     }
 
     /**
