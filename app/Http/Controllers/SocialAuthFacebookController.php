@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Socialite;
+use App\Http\Controllers\Facebook\Facebook;
 use App\Services\SocialFacebookAccountService;
 
 class SocialAuthFacebookController extends Controller
