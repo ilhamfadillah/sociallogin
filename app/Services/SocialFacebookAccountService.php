@@ -23,7 +23,7 @@ class SocialFacebookAccountService
                 'provider' => 'facebook'
                 //'nickname' => $providerUser->getNickname(),
                 //'avatar' => $providerUser->avatar_original,
-                //'token' => $providerUser->token,
+                //'to ken' => $providerUser->token,
             ]);
 
             $user = User::whereEmail($providerUser->getEmail())->first();
