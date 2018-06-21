@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Socialite;
-use App\Http\Controllers\Facebook\Facebook;
+
 use App\Services\SocialFacebookAccountService;
+use Facebook\Facebook as Facebook;
+use Facebook\Exceptions\FacebookResponseException as FacebookResponseException;
+use Facebook\Exceptions\FacebookSDKException as FacebookSDKException;
+
 
 class SocialAuthFacebookController extends Controller
 {
