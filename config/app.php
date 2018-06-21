@@ -163,7 +163,12 @@ return [
         /*
          * Socialite Login...
          */
-        Laravel\Socialite\SocialiteServiceProvider::class,
+        //Laravel\Socialite\SocialiteServiceProvider::class,
+
+        /*
+         * Facebook SDK
+         */
+         SammyK\LaravelFacebookSdk\LaravelFacebookSdkServiceProvider::class,
     ],
 
     /*
@@ -212,7 +217,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        //'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Facebook' => SammyK\LaravelFacebookSdk\FacebookFacade::class,
     ],
 
 ];
