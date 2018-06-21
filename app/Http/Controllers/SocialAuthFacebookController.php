@@ -27,11 +27,11 @@ class SocialAuthFacebookController extends Controller
     {
       $user = $service->createOrGetUser(Socialite::driver('facebook')->user());
       $x = Socialite::driver('facebook')->user();
-      var_dump($user->token);
+      var_dump($service->token);
       echo "<br><hr>";
       var_dump($user->refreshToken);
       echo "<br><hr>";
-      var_dump($user->tokenSecret); exit;
+      var_dump($user->tokenSecret);
       echo "<br><hr>";
       var_dump($x->token); exit;
         auth()->login($user);
