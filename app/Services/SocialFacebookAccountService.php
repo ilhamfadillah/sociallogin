@@ -20,9 +20,9 @@ class SocialFacebookAccountService
             $account = new SocialFacebookAccount([
                 'provider_user_id' => $providerUser->getId(),
                 'provider' => 'facebook'
-                'nickname' => $providerUser->getNickname(),
-                'avatar' => $providerUser->avatar_original,
-                'token' => $providerUser->token,
+                //'nickname' => $providerUser->getNickname(),
+                //'avatar' => $providerUser->avatar_original,
+                //'token' => $providerUser->token,
             ]);
 
             $user = User::whereEmail($providerUser->getEmail())->first();
