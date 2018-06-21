@@ -30,11 +30,10 @@ class SocialAuthFacebookController extends Controller
       $helper = $fb->getRedirectLoginHelper();
 
       $permissions = ['email']; // Optional permissions
-      $loginUrl = $helper->getLoginUrl('http://quiet-ridge-76454.herokuapp.com/callback', $permissions);
+      $loginUrl = $helper->getLoginUrl('https://quiet-ridge-76454.herokuapp.com/callback', $permissions);
 
-      $signin =  '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
+      echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
 
-      return $signin->redirect();
 
       //return Socialite::driver('facebook')->redirect();
     }
