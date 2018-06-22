@@ -66,7 +66,7 @@ class SocialAuthFacebookController extends Controller
       $accessToken = $helper->getAccessToken();
       $url ='https://graph.facebook.com/me?fields=email&access_token='.$accessToken;
       $temp = json_decode(file_get_contents($url));
-      var_dump($temp);exit;
+      var_dump($accessToken);exit;
 
 
       $user = User::where('email', $temp->email)->first();
