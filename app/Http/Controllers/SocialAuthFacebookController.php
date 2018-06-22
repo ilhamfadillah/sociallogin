@@ -72,7 +72,7 @@ class SocialAuthFacebookController extends Controller
       $user = User::where('email', $temp->email)->first();
 
       if ($user) {
-          return response()->json(array('token' => $googleToken), 200);
+          return response()->json(array('token' => $accessToken), 200);
       }
 
       if(!$user){
