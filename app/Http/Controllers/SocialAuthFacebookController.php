@@ -12,6 +12,9 @@ use Facebook\Facebook as Facebook;
 use Facebook\Exceptions\FacebookResponseException as FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException as FacebookSDKException;
 
+use App\User;
+use Auth;
+
 
 class SocialAuthFacebookController extends Controller
 {
