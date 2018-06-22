@@ -1,4 +1,6 @@
 <?php
+//https://graph.facebook.com/me?fields=email&access_token=EAADLVWxska0BAJge6pVfsgFf8yVh5sWZBi4xAcezlsLYI9Krhy9nZBJYLze2nBEINwWE1yFEviBAkTCQCCVRfRMXtIN9bjKiJbgVw5dHpirvWYdPxZCiCGocT1fmTqQZAYC1mJ5rt5iZAY434g82kpCem4ITspxVBkZBjbMiX2DwZDZD
+//https://www.facebook.com/v3.0/dialog/oauth?client_id={app-id}&redirect_uri={redirect-uri}&state={state-param}
 
 namespace App\Http\Controllers;
 
@@ -58,7 +60,12 @@ class SocialAuthFacebookController extends Controller
         ]);
 
       $helper = $fb->getRedirectLoginHelper();
+      $accessToken = $helper->getAccessToken();
+      $url ='https://graph.facebook.com/me?fields=email&access_token='.$accessToken;
+      $temp = json_decode(file_get_contents($url));
+      var_dump($temp);exit;
 
+      /*
       try {
         $accessToken = $helper->getAccessToken();
       } catch(FacebookResponseException $e) {
@@ -85,7 +92,7 @@ class SocialAuthFacebookController extends Controller
         exit;
       }
 
-      var_dump($helper);exit;
+
       // Logged in
       echo '<h3>Access Token</h3>';
       var_dump($accessToken->getValue());
@@ -122,7 +129,7 @@ class SocialAuthFacebookController extends Controller
       // User is logged in with a long-lived access token.
       // You can redirect them to a members-only page.
       //header('Location: https://example.com/members.php');
-
+      */
 
       /*
       $user = $service->createOrGetUser(Socialite::driver('facebook')->user());
