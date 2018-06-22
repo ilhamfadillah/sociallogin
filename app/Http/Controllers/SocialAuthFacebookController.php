@@ -14,7 +14,7 @@ use Facebook\Exceptions\FacebookSDKException as FacebookSDKException;
 
 use App\User;
 use Auth;
-
+use Illuminate\Support\Str;
 
 class SocialAuthFacebookController extends Controller
 {
